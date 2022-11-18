@@ -1,4 +1,4 @@
-#Ссылка на github-pages: https://apromitit.github.io/WELBEX/
+# Ссылка на github-pages: https://apromitit.github.io/WELBEX/
 
 # Getting Started with Create React App
 
