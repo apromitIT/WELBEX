@@ -1,0 +1,125 @@
+@import './vars.scss';
+
+@mixin textAccent($weight, $spacing: 0) {
+	strong {
+		text-transform: uppercase;
+		font-weight: $weight;
+		letter-spacing: $spacing;
+		background: $textColor;
+		background: $mainGradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+
+		span {
+			text-transform: lowercase;
+		}
+	}
+}
+
+@mixin titleStyle($weight, $size: 16px, $font: $fontAccent) {
+	font-family: $font;
+	font-size: $size;
+	font-weight: $weight;
+}
+
+@mixin purpleBall {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: (100vw - 41vw);
+	top: (100vh - 113vh);
+	border-radius: 50%;
+	background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%);
+	box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+	filter: blur(5px);
+	backdrop-filter: blur(2px);
+	z-index: -10;
+
+@include mobile {
+	left: (100vw - 10vw);
+	top: (100vh - 64vh);
+	scale: .66;
+}
+
+}
+
+@mixin redBall($scale: 1, $left: 36%, $top: -8%) {
+	position: absolute;
+	width: 83px;
+	height: 83px;
+	top: $top;
+	left: $left;
+	border-radius: 50%;
+	background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%);
+	box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+	backdrop-filter: blur(2px);
+	z-index: -10;
+	scale: $scale;
+
+
+}
+
+@mixin purpleLight {
+	position: absolute;
+	width: 259px;
+	height: 259px;
+	left: 43%;
+	top: -60%;
+	border-radius: 50%;
+	background: #833AB4;
+	opacity: .6;
+	filter: blur(196px);
+	z-index: -5;
+
+	@include mobile {
+		left: 83%;
+		top: 25%;
+	}
+}
+
+@mixin redLight {
+	position: absolute;
+	width: 320px;
+	height: 320px;
+	left: -8%;
+	top: 25%;
+	border-radius: 50%;
+	background: #961A1A;
+	opacity: 0.6;
+	filter: blur(196px);
+	z-index: -5;
+
+	@include mobile {
+		width: 210px;
+		height: 210px;
+		left: -10%;
+		top: 58%;
+	}
+}
+
+@mixin yellowLight {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	left: -20%;
+	top: 115%;
+	border-radius: 50%;
+	background: #FCB045;
+	opacity: 0.4;
+	filter: blur(196px);
+	z-index: -10;
+}
+
+@mixin mobile() {
+	@media (max-width: $breakpoint_mobile) {
+		@content;
+	}
+}
+
+@mixin laptop() {
+	@media (max-width: $breakpoint_xl) {
+		@content;
+	}
+}

@@ -1,0 +1,30 @@
+@import-normalize;
+@import './components/scss/mixins.scss';
+@import './components/scss/vars.scss';
+@import './components/scss/settings';
+
+
+
+
+body {
+	margin: 0;
+	color: $textColor;
+	@include titleStyle(400);
+	background-color: $mainColor;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+footer a,
+.main-menu a {
+	&:hover {
+		border-bottom: 2px solid $textColor;
+	}
+}
+
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

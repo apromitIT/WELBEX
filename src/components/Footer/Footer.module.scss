@@ -1,0 +1,163 @@
+@import '../scss/mixins.scss';
+
+footer {
+	padding-top: 40px;
+
+	.footer-inner {
+		display: flex;
+		// justify-content: space-between;
+
+	}
+
+	.footer-title {
+		@include titleStyle(700, 14px);
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #656566;
+	}
+
+	.footer-item {
+
+		&:first-child {
+			margin-right: 9%;
+		}
+
+		&:last-child {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			margin-left: auto;
+		}
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+
+	.footer-menu {
+		width: 410px;
+		display: grid;
+		grid-template-columns: 3fr 4fr;
+		gap: 0 9%;
+	}
+
+	.phone {
+		margin-bottom: 20px;
+
+		border-bottom: none;
+
+		&:hover {
+			color: #d55e53;
+			border-bottom: none;
+		}
+	}
+
+	.social-links {
+		display: flex;
+
+		li {
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+				margin-bottom: 23px;
+			}
+		}
+	}
+
+	.copyright {
+		padding-top: 23px;
+		margin-bottom: 20px;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.22rem;
+		text-align: end;
+
+		a {
+			padding-top: 5px;
+			text-decoration: underline;
+			transition: all .3s;
+
+			&:hover {
+				color: #d55e53;
+				border-bottom: none;
+			}
+		}
+	}
+
+	@include laptop {
+		.footer-inner {
+			align-items: center;
+		}
+
+		.footer-menu {
+			width: fit-content;
+		}
+
+		.footer-item {
+			max-width: 410px;
+
+			&:last-child {
+				align-items: flex-start;
+			}
+		}
+	}
+
+
+	@include mobile {
+
+		padding-bottom: 30px;
+		background-color: #0E1014;
+		z-index: 90;
+
+		.footer-inner {
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.footer-title {
+			@include titleStyle(700, 12px);
+		}
+
+		li {
+			@include titleStyle(400, 14px);
+			line-height: 1.21;
+		}
+
+		.footer-item {
+			width: 288px;
+			margin-bottom: 20px;
+
+			&:first-child {
+				margin-right: 0;
+			}
+
+			&:last-child {
+				align-items: flex-start;
+				margin-bottom: 17px;
+				margin-left: 0;
+			}
+		}
+
+		.footer-menu {
+			gap: 0 9%;
+		}
+
+		.phone {
+			margin-bottom: 8px;
+		}
+
+		.social-links {
+			li {
+				&:last-child {
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		.copyright {
+			text-align: left;
+		}
+	}
+}

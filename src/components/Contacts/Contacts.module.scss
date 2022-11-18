@@ -1,0 +1,43 @@
+@import '../Footer/Footer.module.scss';
+@import '../Header/Header.module.scss';
+
+.phone {
+	display: inline-block;
+}
+
+.social-links {
+	display: flex;
+}
+
+.icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-bottom: none;
+	transition: all .3s;
+
+	&:hover {
+		transform: scale(1.25);
+		border-bottom: none;
+	}
+
+	@include mobile {
+		width: 24px;
+		height: 24px;
+	}
+
+}
+
+.icon-telegram {
+	background-image: url("../../img/telegram.svg");
+}
+
+.icon-viber {
+	background-image: url('../../img/viber.svg');
+}
+
+.icon-whatsapp {
+	background-image: url('../../img/whatsapp.svg');
+}

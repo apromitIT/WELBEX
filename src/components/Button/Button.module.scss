@@ -1,0 +1,18 @@
+@import '../scss/mixins.scss';
+
+.btn {
+	display: block;
+	width: fit-content;
+	padding: 21px 35px;
+	margin-left: auto;
+	@include titleStyle(500);
+	background-color: $btnColor;
+
+	&:hover {
+		background-color: darken($btnColor, 10%);
+	}
+
+	&:active {
+		background-color: #d55e53;
+	}
+}

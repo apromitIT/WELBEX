@@ -1,0 +1,34 @@
+@import '../scss/mixins.scss';
+
+.purple-ball {
+	@include purpleBall;
+}
+
+.red-ball {
+	@include redBall;
+
+	@include mobile {
+		@include redBall (.45, 3%, 88%);
+	}
+
+}
+
+.red-ball-2 {
+	@include redBall (.3, 57.5%, 85%);
+
+	@include mobile {
+		@include redBall (.23, 77%, 115%);
+	}
+}
+
+.purple-light {
+	@include purpleLight;
+}
+
+.red-light {
+	@include redLight;
+}
+
+.yellow-light {
+	@include yellowLight;
+}
