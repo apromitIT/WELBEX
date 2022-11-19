@@ -36,6 +36,18 @@ header {
 	.main-menu {
 		min-width: clamp(288px, 500px, 40%);
 		@include titleStyle(500);
+
+		li, a {
+			transition: all .3s;
+			&:hover {
+			// transform: translate3d(0, -0.2rem, 0);
+			scale: 1.1;
+		}
+			&:active {
+				color: #e8766c;
+			}
+		}
+		
 	}
 
 	.header-contacts {
@@ -45,11 +57,9 @@ header {
 	.phone {
 		margin-right: 47px;
 		@include titleStyle(500);
-		border-bottom: none;
 
 		&:hover {
 			color: #d55e53;
-			border-bottom: none;
 		}
 	}
 

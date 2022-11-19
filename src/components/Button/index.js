@@ -4,7 +4,7 @@ function Btn(props) {
 	const {text = ''} = props;
 	return (
 <>
-<a href="/" className={styles.btn}>{text}
+<a href="#" className={styles.btn}>{text}
 
 </a>
 </>

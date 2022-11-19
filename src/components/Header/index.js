@@ -9,7 +9,7 @@ function Header() {
 		<>
 			<header>
 				<div className={styles.container}>
-					{isDesktop && <div className={styles['main-logo']}><a href='/'> <img
+					{isDesktop && <div className={styles['main-logo']}><a href='#'> <img
 						src={logo}
 						height="24"
 						width="140px"
